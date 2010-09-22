@@ -117,6 +117,10 @@ module WillPaginate
       @total_pages   = (@total_entries / per_page.to_f).ceil
     end
 
+    def current_page=(number)
+      @current_page = number
+    end
+
     # This is a magic wrapper for the original Array#replace method. It serves
     # for populating the paginated collection after initialization.
     #
